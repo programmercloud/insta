@@ -1,0 +1,84 @@
+:root {
+    --zTranslation: 20px;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #333;
+    height: 100vh;
+    perspective: 800px;
+  }
+  
+  body * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+  
+  }
+  
+  .external-div {
+    border: 10px solid #33ffcc;
+    width: 15em;
+    height: 15em;
+    transform: rotateX(45deg) rotateY(45deg) scale(1.2) translate(-50%, -50%);
+  
+    animation: rotate 5s linear infinite;
+  }
+  
+  .internal-div {
+    position: absolute;
+    border: 10px solid rgb(37, 168, 191, 50%);
+    top: -10px;
+    left: -10px;
+    height: calc(100%);
+    width: calc(100%);
+  }
+  
+  .internal-div-front1 {
+    border: 10px solid #33ff66;
+    transform: translateZ(var(--zTranslation));
+  }
+  
+  .internal-div-front2 {
+    border: 10px solid #ffcc33;
+    transform: translateZ(calc(2 * var(--zTranslation)));
+  }
+  
+  .internal-div-front3 {
+    border: 10px solid #ff6633;
+    transform: translateZ(calc(3 * var(--zTranslation)));
+  }
+  
+  .internal-div-front4 {
+    border: 10px solid #ff3366;
+    transform: translateZ(calc(4 * var(--zTranslation)));
+  }
+  
+  .internal-div-back1 {
+    border: 10px solid #3366ff;
+    transform: translateZ(calc(-1 * var(--zTranslation)));
+  }
+  
+  .internal-div-back2 {
+    border: 10px solid #6633ff;
+    transform: translateZ(calc(-2 * (var(--zTranslation))));
+  }
+  
+  .internal-div-back3 {
+    border: 10px solid #a33afa;
+    transform: translateZ(calc(-3 * (var(--zTranslation))));
+  }
+  
+  .internal-div-back4 {
+    border: 10px solid #cc33ff;
+    transform: translateZ(calc(-4 * ((var(--zTranslation)))));
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotateX(45deg) rotateY(45deg) scale(1.2) translate(-50%, -50%)
+        rotateZ(360deg);
+    }
+  }
+  
