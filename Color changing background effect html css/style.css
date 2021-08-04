@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+body{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: #fff;
+    font-size: 5em;
+    background-color: #f1c40f;
+    animation: color 5s linear 0s infinite alternate running;
+}
+@keyframes color{
+    0%{
+        background-color: #f1c40f;
+    }
+    32%{
+        background-color: #e74c3c;
+    }
+    55%{
+        background-color: #9b59b6;
+    }
+    76%{
+        background-color: #16a085;
+    }
+    100%{
+        background-color: #2ecc71;
+    }
+}
