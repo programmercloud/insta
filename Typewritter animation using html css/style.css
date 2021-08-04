@@ -1,0 +1,26 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2e4df;
+}
+.demo{
+    width: 23ch;
+    animation: typing 2s steps(17), blink .6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3.5px solid;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 3em;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+@keyframes blink{
+    50%{
+        border-radius: transparent;
+    }
+}
